@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [v-cloak] {
+            display:none;
+            }
+    </style>
+    <script src = "../lib/vue.js"></script>
+</head>
+<body>
+    <div class = "app">
+        <p v-cloak>{{msg}}</p>
+        <div v-text = "msg2"></div>
+        <div v-html = "msg3"></div>
+        <div>{{msg4}}</div>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:'.app',
+            data: {
+                msg: '123',
+                msg2: '<h1> test line to show result of using v-text attribute that try to display in html format</h1>',
+                msg3: '<h1> test line to show result of using v-html attribute that try to display in html format</h1>',
+                msg4: '<h1> test line to show result of using no attribute that try to display in html format</h1>'
+            }
+        })
+    </script>
+    
+</body>
+</html>
