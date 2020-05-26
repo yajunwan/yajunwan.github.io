@@ -15,10 +15,11 @@
     <div class = "app">
         <p v-cloak>{{msg}}</p>
         <button onclick = loadmsg()> load msg</button>
+        <div v-text = "msg2"></div>
+        <div v-html = "msg3"></div>
+        <div>{{msg4}}</div>
     </div>
-    <div v-text = "msg2"></div>
-    <div v-html = "msg3"></div>
-    <div>{{msg4}}</div>
+
     <script>
         function loadmsg(){
         var vm = new Vue({
