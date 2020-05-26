@@ -14,14 +14,12 @@
 <body>
     <div class = "app">
         <p v-cloak>{{msg}}</p>
-        <button onclick = loadmsg()> load msg</button>
         <div v-text = "msg2"></div>
         <div v-html = "msg3"></div>
         <div>{{msg4}}</div>
     </div>
 
     <script>
-        function loadmsg(){
         var vm = new Vue({
             el:'.app',
             data: {
@@ -31,7 +29,6 @@
                 msg4: '<h1> test line to show result of using no attribute that try to display in html format</h1>'
             }
         })
-    }
     </script>
     
 </body>
