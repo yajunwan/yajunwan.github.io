@@ -15,7 +15,22 @@
 
     <a href="vue.js_notes/01.Vue_based_code.html">01.Vue_based_code</a>
     <a href="vue.js_notes/02.v-cloak,v-text,v-html的学习.html">02.v-cloak,v-text,v-html的学习</a>
+    <p>
+        <form>
+            <label for="myfile">Select a file:</label><br>
+            <input type="file" accept = "image/*" 
+                id="myfile" onchange = loadfile() 
+                style="display: none;"><br>
+            <img id="output"><br>
+        </form>
+    </p>
+    <script>
+        function loadfile(){
+            var img = document.getElementById("output");
+            image.src = URL.createObjectURL(document.getElementById("myfile").files[0]);
 
+        };
+    </script>
     <script>
         function sign_up(){
             document.getElementById("welcome_word").innerHTML = 
