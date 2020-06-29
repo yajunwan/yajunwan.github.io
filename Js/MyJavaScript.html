@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My JavaScript</title>
+</head>
+<body>
+    <button onclick="hello()">Execute hello.js</button>
+    <button onclick="condition()">Execute condition.js</button>
+    <button onclick="statement()">Execute statement.js</button>
+    <button onclick="functions()">Execute functions.js</button>
+    <script>
+        function hello(){
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "hello.js";
+            document.getElementsByTagName("head")[0].appendChild(script);
+        }
+        function condition(){
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "condition.js";
+            document.getElementsByTagName("head")[0].appendChild(script);
+        }
+        function statement(){
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "statement.js";
+            document.getElementsByTagName("head")[0].appendChild(script);
+        }
+        function functions(){
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "functions.js";
+            document.getElementsByTagName("head")[0].appendChild(script);
+        }
+    </script>
+</body>
+</html>
