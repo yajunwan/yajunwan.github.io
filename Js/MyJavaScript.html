@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My JavaScript</title>
+    <style>
+        #header_line{
+            color:rgb(134, 150, 167);
+            font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+        }
+        #paragraph{
+            color:rgb(199,184,16);
+        }
+        #button{
+            background-color: rgb(150,164,139);
+            height: 40px;
+            font-family: "Actor";
+        }
+    </style>
 </head>
-<body>
-    <button onclick="hello()">Execute hello.js</button>
-    <button onclick="condition()">Execute condition.js</button>
-    <button onclick="statement()">Execute statement.js</button>
-    <button onclick="functions()">Execute functions.js</button>
+
+<body style = "background-color:rgb(255, 250, 244)">
+    <h2 id="header_line">1.Variables Assignment and Display</h2>
+    <p id = "paragraph">introduction to the JavaScript</p>
+    <button onclick="hello()" id="button">Execute hello.js</button>
+    <h2 id="header_line" >2.Conditions</h2>
+    <button onclick="condition()" id="button">Execute condition.js</button>
+    <h2 id="header_line">3.Repeat Statements</h2>
+    <button onclick="statement()" id="button">Execute statement.js</button>
+    <h2 id="header_line">4.Write functions</h2>
+    <button onclick="functins()" id="button">Execute functions.js</button>
     <script>
         function hello(){
             var script = document.createElement("script");
