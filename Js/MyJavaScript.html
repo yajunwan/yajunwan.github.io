@@ -8,8 +8,10 @@
         #header_line{
             color:rgb(134, 150, 167);
             font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+            
         }
         #paragraph{
+            font-family:"Alegreya";
             color:rgb(199,184,16);
         }
         #button{
@@ -17,19 +19,36 @@
             height: 40px;
             font-family: "Actor";
         }
+        pre{
+            font-family:"Actor";
+            color:rgb(165,108,65);
+            white-space: pre;
+        }
     </style>
 </head>
 
 <body style = "background-color:rgb(255, 250, 244)">
-    <h2 id="header_line">1.Variables Assignment and Display</h2>
-    <p id = "paragraph">introduction to the JavaScript</p>
+    <h2 id="header_line">1.Variables Assignment and Display (Press F12 for results)</h2>
     <button onclick="hello()" id="button">Execute hello.js</button>
-    <h2 id="header_line" >2.Conditions</h2>
+    <h2 id="header_line" >2.Conditions (Press F12 for results)</h2>
     <button onclick="condition()" id="button">Execute condition.js</button>
-    <h2 id="header_line">3.Repeat Statements</h2>
+    <h2 id="header_line">3.Repeat Statements (Press F12 for results)</h2>
     <button onclick="statement()" id="button">Execute statement.js</button>
-    <h2 id="header_line">4.Write functions</h2>
-    <button onclick="functins()" id="button">Execute functions.js</button>
+    <h2 id="header_line">4.Write functions (Press F12 for results)</h2>
+    <button onclick="functions()" id="button">Execute functions.js</button>
+    <h2 id="header_line">5.Create objects (Press F12 for results)</h2>
+    <pre>
+        Task1:Adding character experience
+                Improve our example RPG program to add an experience property named xp to the character. Its
+                initial value is 0. Experience must appear in character description.
+        
+        Task2:Modeling a dog
+                Complete the following program to add the dog object definition.
+                // TODO: create the dog object here
+                console.log(`${dog.name} is a ${dog.species} dog measuring ${dog.size}`);
+                console.log(`Look, a cat! ${dog.name} barks: ${dog.bark()}`);
+     </pre>
+    <button onclick="objects()" id="button">Execute objects.js</button>
     <script>
         function hello(){
             var script = document.createElement("script");
@@ -53,6 +72,12 @@
             var script = document.createElement("script");
             script.type = "text/javascript";
             script.src = "functions.js";
+            document.getElementsByTagName("head")[0].appendChild(script);
+        }
+        function objects(){
+            var script=document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "objects.js";
             document.getElementsByTagName("head")[0].appendChild(script);
         }
     </script>
