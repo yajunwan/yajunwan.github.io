@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My JavaScript</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
     <style>
         #header_line{
             color:rgb(134, 150, 167);
@@ -50,6 +50,17 @@
                 console.log(`Look, a cat! ${dog.name} barks: ${dog.bark()}`);
      </pre>
     <button onclick="objects()" id="button">Execute objects.js</button>
+    <h2 id="header_line">6.Manipulate Arrays (Press F12 for results)</h2>
+    <pre>
+        Array maximum
+            Write a program that creates the following array, then calculates and shows the array’s maximum
+            value.
+            const values = [3, 11, 7, 2, 9, 10];
+        List of words
+            Write a program that asks the user for a word until the user types "stop". The program then
+            shows each of these words, except "stop".    
+    </pre>
+    <button onclick="arrays()" id="button">Execute Array.js</button>
     <script>
         function hello(){
             var script = document.createElement("script");
@@ -79,6 +90,12 @@
             var script=document.createElement("script");
             script.type = "text/javascript";
             script.src = "objects.js";
+            document.getElementsByTagName("head")[0].appendChild(script);
+        }
+        function arrays(){
+            var script=document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "Array.js";
             document.getElementsByTagName("head")[0].appendChild(script);
         }
     </script>
