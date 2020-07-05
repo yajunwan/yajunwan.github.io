@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Let's play -- Drum Kit Player</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
     <style>
         body{
           background-image: url('background.jpg');
@@ -12,10 +12,77 @@
           background-attachment: fixed;
           background-size: cover;
         }
-        </style>
+        kbd{
+            display:block;
+            font-size: x-large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .key{
+            color:aliceblue;
+            font-size:medium;
+            border-style: outset;
+            margin:1rem;
+            padding:3rem;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.09s;
+        }
+        .playing{
+            border-color:blueviolet;
+            font-size:Large;
+            background-color: rgb(93, 107, 107);
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
+    <div data-key="65" class="key">
+        <kbd>A</kbd>
+        <span style ="color:coral">Clap</span>
+    </div>
+    <div data-key="83" class="key">
+        <kbd>S</kbd>
+        <span style ="color:coral" >Hihat</span>
+    </div>
+    <div data-key="68" class = "key">
+        <kbd>D</kbd>
+        <span style ="color:coral">Boom</span>
+    </div>
+    <div data-key="70" class = "key">
+        <kbd>F</kbd>
+        <span style ="color:coral">Tom</span>
+    </div>
+    <div data-key="71" class = "key">
+        <kbd>G</kbd>
+        <span style ="color:coral">Floor-Tom</span>
+    </div>
 
+    <audio data-key="65" src="Clap.wav"></audio>
+    <audio data-key="83" src="Hihat.wav"></audio>
+    <audio data-key="68" src="Boom.wav"></audio>
+    <audio data-key="70" src="Tom.wav"></audio>
+    <audio data-key="71" src="Floor-Tom.wav"></audio>
+    <br>
+    <button onclick = "createAudio()">Create Your Audio</button>
+    <script>
+        function playKey(e){
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+            if (!audio)return;
+            audio.currentTime = 0;
+            audio.play();
+            key.classList.add('playing');
+        }
+        function remove(e){
+            console.log(this.classList);
+            this.classList.remove('playing');
+        }
+        window.addEventListener("keydown",playKey);
+        const keys = document.querySelectorAll(".key");
+        for (const k of keys){
+            k.addEventListener("transitionend",remove);
+        }
+    </script>
     <footer style="color:aliceblue"> <small>&copy; <span>Photo by <a href="https://unsplash.com/@geodomou?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Georgios Domouchtsidis</a> on <a href="https://unsplash.com/backgrounds/desktop/hd?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></small> </footer> 
 </body>
 </html>
