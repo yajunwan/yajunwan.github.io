@@ -7,7 +7,7 @@ for (const num of myArray1) {
         max = num;
     } 
 }
-console.log(max);
+alert(max);
 
 //List of words
 const myArray2 = [];
@@ -22,7 +22,7 @@ const words = () =>{
             myArray2.push(user_input);
         }
     }
-    console.log(myArray2);
+    alert(myArray2);
 };
 words();
 
