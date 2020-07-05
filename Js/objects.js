@@ -21,8 +21,8 @@ const dog = {
         return `Grrr! Grrr`;
     }
 };
-console.log(`${dog.name} is a ${dog.species} dog measuring ${dog.size}`);
-console.log(`Look, a cat! ${dog.name} barks: ${dog.bark()}`);
+alert(`${dog.name} is a ${dog.species} dog measuring ${dog.size}`);
+alert(`Look, a cat! ${dog.name} barks: ${dog.bark()}`);
 
 //Modelling a circle
 const r = Number(prompt("Enter the circle radius:"));
@@ -35,8 +35,8 @@ const circle = {
         return Math.PI*Math.pow(this.radius,2);
     }
 };
-console.log(`Its circumference is ${circle.circumference()}`);
-console.log(`Its area is ${circle.area()}`);
+alert(`Its circumference is ${circle.circumference()}`);
+alert(`Its area is ${circle.area()}`);
 
 //Modelling a bank account
 const account = {
@@ -50,7 +50,7 @@ const account = {
     }
 };
 
-console.log(account.describe());
+alert(account.describe());
 account.credit(250);
 account.credit(-80);
-console.log(account.describe());
+alert(account.describe());
