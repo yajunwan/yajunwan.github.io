@@ -37,7 +37,7 @@
     <button onclick="statement()" id="button">Execute statement.js</button>
     <h2 id="header_line">4.Write functions (Press F12 for results)</h2>
     <button onclick="functions()" id="button">Execute functions.js</button>
-    <h2 id="header_line">5.Create objects (Press F12 for results)</h2>
+    <h2 id="header_line">5.Create objects</h2>
     <pre>
         Task1:Adding character experience
                 Improve our example RPG program to add an experience property named xp to the character. Its
@@ -50,7 +50,7 @@
                 console.log(`Look, a cat! ${dog.name} barks: ${dog.bark()}`);
      </pre>
     <button onclick="objects()" id="button">Execute objects.js</button>
-    <h2 id="header_line">6.Manipulate Arrays (Press F12 for results)</h2>
+    <h2 id="header_line">6.Manipulate Arrays</h2>
     <pre>
         Array maximum
             Write a program that creates the following array, then calculates and shows the array’s maximum
@@ -61,6 +61,21 @@
             shows each of these words, except "stop".    
     </pre>
     <button onclick="arrays()" id="button">Execute Array.js</button>
+    <h2 id="header_line">7.Manipulate Strings</h2>
+    <pre>
+        Word info
+            Write a program that asks you for a word then shows its length, lowercase, and uppercase values.
+        Vowel count
+            Improve the previous program so that it also shows the number of vowels inside the word.
+        Backwards word
+            Improve the previous program so that it shows the word written backwards.
+        Palindrome
+            Improve the previous program to check if the word is a palindrome. A palindrome is a word or
+            sentence that’s spelled the same way both forward and backward, ignoring punctuation, case,
+            and spacing.
+                    "radar" should be detected as a palindrome, "Radar" too.    
+    </pre>
+    <button onclick="strings()" id="button">Execute strings.js</button>
     <script>
         function hello(){
             var script = document.createElement("script");
@@ -96,6 +111,12 @@
             var script=document.createElement("script");
             script.type = "text/javascript";
             script.src = "Array.js";
+            document.getElementsByTagName("head")[0].appendChild(script);
+        }
+        function strings(){
+            var script=document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "strings.js";
             document.getElementsByTagName("head")[0].appendChild(script);
         }
     </script>
