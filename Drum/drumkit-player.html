@@ -9,7 +9,6 @@
         body{
           background-image: url('background.jpg');
           background-repeat: no-repeat;
-          background-attachment: fixed;
           background-size: cover;
         }
         kbd{
@@ -20,18 +19,18 @@
         .key{
             color:aliceblue;
             font-size:medium;
-            border-style: outset;
-            margin:1rem;
+            border-style: solid;
+            margin:15px;
             padding:3rem;
             display: inline-block;
             text-align: center;
-            transition: all 0.09s;
+            transition: all 0.2s;
         }
         .playing{
             border-color:blueviolet;
+            border: width 20px;
             font-size:Large;
-            background-color: rgb(93, 107, 107);
-            transform: scale(1.1);
+            background-color: rgb(154, 158, 158);
         }
     </style>
 </head>
@@ -74,15 +73,15 @@
             key.classList.add('playing');
         }
         function remove(e){
-            console.log(this.classList);
             this.classList.remove('playing');
         }
         window.addEventListener("keydown",playKey);
+        window.addEventListener("click",playKey);
         const keys = document.querySelectorAll(".key");
         for (const k of keys){
             k.addEventListener("transitionend",remove);
         }
     </script>
-    <footer style="color:aliceblue"> <small>&copy; <span>Photo by <a href="https://unsplash.com/@geodomou?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Georgios Domouchtsidis</a> on <a href="https://unsplash.com/backgrounds/desktop/hd?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></small> </footer> 
+    <footer style="color:aliceblue;position:center"> <small>&copy; <span>Photo by <a href="https://unsplash.com/@5tep5?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Alexander Popov</a> on <a href="https://unsplash.com/s/photos/club-wallpaper?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></small> </footer> 
 </body>
 </html>
