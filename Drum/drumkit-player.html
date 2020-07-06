@@ -17,14 +17,15 @@
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
         .key{
-            color:aliceblue;
+            border-color:rgb(188, 207, 116);
+            color:antiquewhite;
             font-size:medium;
             border-style: solid;
-            margin:15px;
-            padding:3rem;
+            padding:1.5rem;
             display: inline-block;
             text-align: center;
             transition: all 0.2s;
+            margin-top:2px;
         }
         .playing{
             border-color:blueviolet;
@@ -35,7 +36,8 @@
     </style>
 </head>
 <body>
-    <div data-key="65" class="key">
+    <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size:150px;text-align: center;color:rgb(208, 236, 108)">Drop the Beat</p>
+    <div data-key="65" class="key" style="margin-left:450px" >
         <kbd>A</kbd>
         <span style ="color:coral">Clap</span>
     </div>
@@ -62,7 +64,7 @@
     <audio data-key="70" src="Tom.wav"></audio>
     <audio data-key="71" src="Floor-Tom.wav"></audio>
     <br>
-    <button onclick = "createAudio()">Create Your Audio</button>
+    <br>
     <script>
         function playKey(e){
             const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
@@ -82,6 +84,6 @@
             k.addEventListener("transitionend",remove);
         }
     </script>
-    <footer style="color:aliceblue;position:center"> <small>&copy; <span>Photo by <a href="https://unsplash.com/@5tep5?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Alexander Popov</a> on <a href="https://unsplash.com/s/photos/club-wallpaper?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></small> </footer> 
+    <footer style="color:aliceblue;text-align:center"> <small>&copy; <span>Photo by <a href="https://unsplash.com/@5tep5?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Alexander Popov</a> on <a href="https://unsplash.com/s/photos/club-wallpaper?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></small> </footer> 
 </body>
 </html>
