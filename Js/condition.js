@@ -1,4 +1,4 @@
-const x = "abc";
+let x = "abc";
 switch (x) {
 case "abc":
 console.log("x = abc");
