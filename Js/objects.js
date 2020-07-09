@@ -1,7 +1,7 @@
 //Create your first object
 // Improve our example RPG program to add an experience property named xp to the character. Its
 // initial value is 0. Experience must appear in character description
-const aurora = {
+let aurora = {
     name: "Aurora",
     health: 150,
     strength: 25,
@@ -13,7 +13,7 @@ const aurora = {
 
 //Modelling a dog
 
-const dog = {
+let dog = {
     name:"Fang",
     species:" boarhound",
     size:"75",
@@ -25,8 +25,8 @@ alert(`${dog.name} is a ${dog.species} dog measuring ${dog.size}`);
 alert(`Look, a cat! ${dog.name} barks: ${dog.bark()}`);
 
 //Modelling a circle
-const r = Number(prompt("Enter the circle radius:"));
-const circle = {
+let r = Number(prompt("Enter the circle radius:"));
+let circle = {
     radius: r,
     circumference(){
         return 2*Math.PI*this.radius;
@@ -39,7 +39,7 @@ alert(`Its circumference is ${circle.circumference()}`);
 alert(`Its area is ${circle.area()}`);
 
 //Modelling a bank account
-const account = {
+let account = {
     name:"Alex",
     balance:0,
     credit(value){
