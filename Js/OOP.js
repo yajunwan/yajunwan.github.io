@@ -3,7 +3,7 @@
 //Dogs
 
 class Dog{
-    constructor(name,species,size){
+    letructor(name,species,size){
         this.name = name;
         this.species = species;
         this.size = size;
@@ -17,17 +17,17 @@ class Dog{
 
     }
 }
-const fang = new Dog("Fang","boarhound",75);
+let fang = new Dog("Fang","boarhound",75);
 alert(`${fang.name} is a ${fang.species} dog measuring ${fang.size}`);
 alert(`Look, a cat! ${fang.name} barks: ${fang.bark()}`);
 
-const snowy = new Dog("Snowy","terrier",22);
+let snowy = new Dog("Snowy","terrier",22);
 alert(`${snowy.name} is a ${snowy.species} dog measuring ${snowy.size}`);
 alert(`Look, a cat! ${snowy.name} barks: ${snowy.bark()}`);
 
 //Character inventory
 class Character {
-    constructor(name, health, strength) {
+    letructor(name, health, strength) {
     this.name = name;
     this.health = health;
     this.strength = strength;
@@ -38,7 +38,7 @@ class Character {
     // Attack a target
     attack(target) {
         if (this.health > 0) {
-        const damage = this.strength;
+        let damage = this.strength;
         console.log(
         `${this.name} attacks ${target.name} and causes ${damage} damage points`);
         target.health -= damage;
@@ -46,7 +46,7 @@ class Character {
             console.log(`${target.name} has ${target.health} health points left`);
             } else {
             target.health = 0;
-            const bonusXP = 10;
+            let bonusXP = 10;
             console.log(`${this.name} eliminated ${target.name} and wins ${bonusXP} experience points, ${this.gold} gold and ${this.key} key(s)`);
             this.xp += bonusXP;
             }
@@ -75,12 +75,12 @@ class Character {
     }
 
 }
-const aurora = new Character("Aurora", 150, 25);
-const glacius = new Character("Glacius", 130, 30);
+let aurora = new Character("Aurora", 150, 25);
+let glacius = new Character("Glacius", 130, 30);
 console.log("Welcome to the adventure! Here are our heroes:");
 console.log(aurora.describe());
 console.log(glacius.describe());
-const monster = new Character("Spike", 40, 20);
+let monster = new Character("Spike", 40, 20);
 console.log("A wild monster has appeared: it's named " + monster.name);
 monster.attack(aurora);
 monster.attack(glacius);
@@ -92,7 +92,7 @@ console.log(glacius.describe());
 
 //Account list
 class account{
-    constructor(name) {
+    letructor(name) {
         this.name = name;
         this.balance = 0;
     }
@@ -105,13 +105,13 @@ class account{
 }
 
 account_arr = [];
-const account1 = new account("Sean");
+let account1 = new account("Sean");
 account_arr.push(account1);
-const account2 = new account("Brad");
+let account2 = new account("Brad");
 account_arr.push(account2);
-const account3 = new account("Georges");
+let account3 = new account("Georges");
 account_arr.push(account3);
-for (const account of account_arr){
+for (let account of account_arr){
     account.credit(1000);
     console.log(account.describe());
 }
