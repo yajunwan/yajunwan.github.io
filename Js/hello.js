@@ -4,12 +4,12 @@ console.log("hello world,this is JS");
 console.log("Hello "+prompt("May I have your name plz?"));
 
 //VAT calculation
-const price = Number(prompt("Please provide with a raw price"));
+let price = Number(prompt("Please provide with a raw price"));
 let final_price = price * 1.206;
 console.log("The final price with VAT would be: "+final_price);
 
 //Celsius to Fahrenheit
-const Fah_deg = Number(prompt("Enter degrees in Fahrenheit"));
+let Fah_deg = Number(prompt("Enter degrees in Fahrenheit"));
 console.log("The entered degree after transfering to Celsius is: "+(Fah_deg-32)*5/9);
 
 //Variable swapping
