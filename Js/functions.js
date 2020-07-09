@@ -2,7 +2,7 @@
 
 //Improved Hello()
 function sayHello(firstName, lastName){
-    const message = (`Hello, ${firstName} ${lastName}`);
+    let message = (`Hello, ${firstName} ${lastName}`);
     console.log(message);
 }
 let name = prompt("May I have your name please?");
@@ -10,8 +10,8 @@ name = name.split(" ");
 sayHello(name[0],name[1]);
 
 //Number Squaring
-const square1 = (x) => Math.pow(x,2);
-const square2 = (x) => Math.pow(x,2);
+let square1 = (x) => Math.pow(x,2);
+let square2 = (x) => Math.pow(x,2);
 
 for (let i=0;i<5;i++){
     console.log(square1(i));
