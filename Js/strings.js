@@ -1,11 +1,11 @@
 //Work with strings
 //Word indo
-const myStr = prompt("Please enter a string");
+let myStr = prompt("Please enter a string");
 alert("The length of the string you entered is: "+myStr.length);
 alert(`The lowercase of the string is ${myStr.toLowerCase()}, and the uppercase of that is ${myStr.toUpperCase()}`);
 
 //Vowel count
-const strArr = Array.from(myStr);
+let strArr = Array.from(myStr);
 let count = 0;
 strArr.forEach(letters => {
     if ("aeiou".indexOf(letters) !== -1){
