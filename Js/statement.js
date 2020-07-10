@@ -17,8 +17,10 @@ country!`;
 console.log(text);
 
 //Input validation
-let number
-while(number = Number(prompt("Please enter a number"))<50 || (number =>100));
+let number = Number(prompt("Please enter a number"));
+while(number<50 || number >= 100){
+    number = Number(prompt("Please enter a number"));
+}
 
 //FizzBuzz
 for (let i = 1;i<101;i++){
