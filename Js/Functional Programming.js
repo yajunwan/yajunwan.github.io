@@ -108,3 +108,11 @@ const students = [
         grades: [4, 3, 2]
     }
 ];
+let acc=[];
+function keyByUsernameReducer(acc,person) {
+    let avrgGrade = (person.grades.reduce((acc,value)=>acc+value,0))/person.grades.length;
+    acc.push({name:person.name,avgGrade:avrgGrade});
+    return acc;
+}
+const femaleStudentsResults = students.filter(x=> x.sex==="f").reduce(keyByUsernameReducer,[]);
+console.log(femaleStudentsResults);
