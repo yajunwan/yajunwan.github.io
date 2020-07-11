@@ -16,7 +16,7 @@
             color:rgb(199,184,16);
         }
         #button{
-            background-color: rgb(150,164,139);
+            background-color: rgb(197, 162, 66);
             height: 40px;
             font-family: "Actor","Book Antiqua", Palatino, serif;
         }
@@ -118,9 +118,19 @@
         Array sum
             Show the total sum of the values in each of the
             arrays.
-                const arrays = [[1, 4], [11], [3, 5, 7]]; 
+                const arrays = [[1, 4], [11], [3, 5, 7]];
     </pre>
+        <pre class = ".paragraph" >
+        <span style="font-weight:bolder;font-size: large;">NOTE:</span>
+            1."..." represents spread syntax, which can be applied to iterable items(arrays, properties of objects etc)
+            2.When trying to traverse a huge database, it is better to use <span style="font-style: italic;font-weight:bold">Map</span> data structure(with cost of O(1))
+               instead of <span style="font-style: italic;font-weight:bold">Array</span>(with the cost of O(n)). If the key in Map is of type String,
+               then it will convert the string into integer using ASCII and apply hash functions to the converted value in order to add the item at
+               a place with unique index.
+        </pre>
     <button onclick="FP()" id="button">Execute Functional Programming.js</button>
+    <h4 id="header_line">10.Personal Object Exercise</h4>
+    <button onclick="SNP()" id="button">SocialNewsProgram</button>
     <script>
         function hello(){
             var script = document.createElement("script");
@@ -176,7 +186,13 @@
             script.src = "Functional Programming.js";
             document.getElementsByTagName("head")[0].appendChild(script);
         }
+        function SNP(){
+            var script=document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "SocialNewsProgram.js";
+            document.getElementsByTagName("head")[0].appendChild(script);
+        }
     </script>
-    <footer style="color:aliceblue"> <small>&copy; <span>Photo by <a href="https://unsplash.com/@geodomou?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Georgios Domouchtsidis</a> on <a href="https://unsplash.com/backgrounds/desktop/hd?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></small> </footer> 
+    <footer style="color:aliceblue"> <small><span>Photo by <a href="https://unsplash.com/@rubavi78?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Rubén Bagüés</a> on <a href="https://unsplash.com/s/photos/wallpaper?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></small> </footer> 
 </body>
 </html>
