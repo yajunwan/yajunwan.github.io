@@ -32,14 +32,67 @@
           background-attachment: fixed;
           background-size: cover;
         }
+        li{
+            list-style-type:none;
+            
+        }
+        a{
+            text-decoration:none;
+            text-align: left;
+            font-size: medium;
+            font-weight:800;
+            color:rgb(73, 90, 109);
+            font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+            padding:2em 4em 1em 0.5em; /*first value means 0 margin for top and bottom, 2vm is margin 2 for left and right side*/
+        }
+        a:hover{
+            background-color:rgb(219, 195, 166);
+            font-weight: 2000;
+        }
+        nav{
+            /* vm stands for viewport width, 100% means it will take the entire width of the screen*/
+            width: 100vw;
+            background-color:rgb(231, 214, 194);
+            position:fixed;
+            top:0;
+            left:0;
+            overflow: hidden;
+
+        }
+        ul{
+            padding-left: 0.2em;
+            margin-bottom: 0.3em;
+            display:flex;/*to display the navigation bar in a row*/
+        }
+
         </style>
     </style>
 </head>
 
 <body style = "background-color:rgb(255, 250, 244)">
-    <h3 id="header_line">Personal Object Exercise</h3>
+    <nav>
+        <ul> <!--ul stands for unordered list-->
+            <li>
+                <a href="#project">Project</a><!--a stands for anchor tag-->
+            </li>
+            <li>
+                <a href="#studyNotes">Study Notes (JavaScript)</a>
+            </li>
+            <li>
+                <a href="#webDevCont">Web Development Content</a>
+            </li>
+        </ul>
+    </nav>
+    <div id = "project">
+        <pre>   </pre>
+    </div>
+    <h3 id="header_line" style="margin-top:40px;">Personal Object Exercise</h3>
     <button onclick="SNP()" id="button" style="margin-left: 1.2rem;">SocialNewsProgram</button>
-    <h3 id="header_line">Study Notes</h3>
+    
+    <div id = "studyNotes">
+        <pre>   </pre>
+    </div>
+    <h3 id="header_line">Study Notes (JavaScript)</h3>
     <h4 id="header_line" style="margin-left: 1.2rem;">1.Variables Assignment and Display (Press F12 for results)</h4>
     <button onclick="hello()" id="button" style="margin-left: 2.5rem;">Execute hello.js</button>
     <h4 id="header_line" style="margin-left: 1.2rem;">2.Conditions (Press F12 for results)</h4>
@@ -132,6 +185,10 @@
                a place with unique index.
         </pre>
     <button onclick="FP()" id="button" style="margin-left: 2.5rem;">10.Execute Functional Programming.js</button>
+    <div id = "webDevCont">
+        <pre>   </pre>
+    </div>
+    <h3 id="header_line">Web Development Content</h3>
     <script>
         function hello(){
             var script = document.createElement("script");
@@ -194,6 +251,6 @@
             document.getElementsByTagName("head")[0].appendChild(script);
         }
     </script>
-    <footer style="color:aliceblue"> <small><span>Photo by <a href="https://unsplash.com/@rubavi78?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Rubén Bagüés</a> on <a href="https://unsplash.com/s/photos/wallpaper?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></small> </footer> 
+    <footer style="color:aliceblue;"><small><span>Photo by <a href="https://unsplash.com/@rubavi78?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Rubén Bagüés</a> on <a href="https://unsplash.com/s/photos/wallpaper?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></small> </footer> 
 </body>
 </html>
