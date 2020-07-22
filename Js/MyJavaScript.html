@@ -51,8 +51,7 @@
         }
         nav{
             /* vm stands for viewport width, 100% means it will take the entire width of the screen*/
-            width: 100vw;
-            background-color:rgb(231, 214, 194);
+            width: 90vw;
             /*position:fixed;*/
             top:0;
             left:0;
@@ -83,7 +82,10 @@
         background-color: rgb(139, 134, 116);
         color :aliceblue; /* Add a dark-grey background on hover */
         }
-
+        article{
+            margin-top: 5rem;
+            margin-bottom:5rem;
+        }
         </style>
     </style>
 </head>
@@ -103,112 +105,114 @@
             </li>
         </ul>
     </nav>
-    <h2>
-        <a id = "project" class = "project" style="padding:0"></a>
-        <span id="header_line">Personal Object Exercise</span>
-    </h2>
-    <button onclick="SNP()" id="button" style="margin-left: 1.2rem;">SocialNewsProgram</button>
-    
-    <h2>
-        <a id = "studyNotes" class = "studyNotes" style="padding:0"></a>
-        <span id="header_line">Study Notes (JavaScript)</span>
-    </h2>
-    <h4 id="header_line" style="margin-left: 1.2rem;">1.Variables Assignment and Display (Press F12 for results)</h4>
-    <button onclick="hello()" id="button" style="margin-left: 2.5rem;">Execute hello.js</button>
-    <h4 id="header_line" style="margin-left: 1.2rem;">2.Conditions (Press F12 for results)</h4>
-    <button onclick="condition()" id="button" style="margin-left: 2.5rem;">Execute condition.js</button>
-    <h4 id="header_line" style="margin-left: 1.2rem;">3.Repeat Statements (Press F12 for results)</h4>
-    <button onclick="statement()" id="button" style="margin-left: 2.5rem;">Execute statement.js</button>
-    <h4 id="header_line" style="margin-left: 1.2rem;">4.Write functions (Press F12 for results)</h4>
-    <button onclick="functions()" id="button" style="margin-left: 2.5rem;">Execute functions.js</button>
-    <h4 id="header_line" style="margin-left: 1.2rem;">5.Create objects</h4>
-    <pre>
-        Task1:Adding character experience
-                Improve our example RPG program to add an experience property named xp to the character. Its
-                initial value is 0. Experience must appear in character description.
+    <article>
+        <h2 style="padding-top:1.5em">
+            <a id = "project" class = "project" style="padding:0"></a>
+            <span id="header_line" >Personal Object Exercise</span>
+        </h2>
+        <button onclick="SNP()" id="button" style="margin-left: 1.2rem;">SocialNewsProgram</button>
         
-        Task2:Modeling a dog
-                Complete the following program to add the dog object definition.
-                // TODO: create the dog object here
-                console.log(`${dog.name} is a ${dog.species} dog measuring ${dog.size}`);
-                console.log(`Look, a cat! ${dog.name} barks: ${dog.bark()}`);
-     </pre>
-    <button onclick="objects()" id="button" style="margin-left: 2.5rem;">Execute objects.js</button>
-    <h4 id="header_line" style="margin-left: 1.2rem;">6.Manipulate Arrays</h4>
-    <pre>
-        Array maximum
-            Write a program that creates the following array, then calculates and shows the array’s maximum
-            value.
-            const values = [3, 11, 7, 2, 9, 10];
-        List of words
-            Write a program that asks the user for a word until the user types "stop". The program then
-            shows each of these words, except "stop".    
-    </pre>
-    <button onclick="arrays()" id="button" style="margin-left: 2.5rem;">Execute Array.js</button>
-    <h4 id="header_line" style="margin-left: 1.2rem;">7.Manipulate Strings</h4>
-    <pre>
-        Word info
-            Write a program that asks you for a word then shows its length, lowercase, and uppercase values.
-        Vowel count
-            Improve the previous program so that it also shows the number of vowels inside the word.
-        Backwards word
-            Improve the previous program so that it shows the word written backwards.
-        Palindrome
-            Improve the previous program to check if the word is a palindrome. A palindrome is a word or
-            sentence that’s spelled the same way both forward and backward, ignoring punctuation, case,
-            and spacing.
-                    "radar" should be detected as a palindrome, "Radar" too.    
-    </pre>
-    <button onclick="strings()" id="button" style="margin-left: 2.5rem;">Execute strings.js</button>
-    <h4 id="header_line" style="margin-left: 1.2rem;">8.Object-Oriented Programming （Press F12 to see more)</h4>
-    <pre>
-        Complete the program to add the definition of the Dog class.
-            Dogs taller than 60 emote "Grrr! Grrr!" when they bark, other ones yip "Woof!
-            Woof!".
-        Character inventory
-            Improve the example RPG to add character inventory management according to the following
-            rules:
-                • A character’s inventory contains a number of gold and a number of keys.
-                • Each character begins with 10 gold and 1 key.
-                • The character description must show the inventory state.
-                • When a character slays another character, the victim’s inventory goes to its vanquisher.
-        Account list
-            Let’s build upon a previous account object exercise. A bank account is still defined by:
-                • A name property.
-                • A balance property, initially set to 0.
-                • A credit method adding the value passed as an argument to the account balance.
-                • A describe method returning the account description.
-            Write a program that creates three accounts: one belonging to Sean, another to Brad and the
-            third one to Georges. These accounts are stored in an array. Next, the program credits 1000 to
-            each account and shows its description.
-    </pre>
-    <button onclick="OOP()" id="button" style="margin-left: 2.5rem;">Execute OOP.js</button>
-    <h4 id="header_line" style="margin-left: 1.2rem;">9.Functional Programming （Press F12 to see more)</h4>
-    <pre>
-        Older movies
-            Improve the example movie program from above so that it shows the titles of movies released
-            before year 2000, using functional programming.
-        Government forms
-            Complete the following program to compute and show the names of political forms ending with
-            "cy". 
-        Array sum
-            Show the total sum of the values in each of the
-            arrays.
-                const arrays = [[1, 4], [11], [3, 5, 7]];
-    </pre>
-        <pre class = ".paragraph" >
-        <span style="font-weight:bolder;font-size: large;">NOTE:</span>
-            1."..." represents spread syntax, which can be applied to iterable items(arrays, properties of objects etc)
-            2.When trying to traverse a huge database, it is better to use <span style="font-style: italic;font-weight:bold">Map</span> data structure(with cost of O(1))
-               instead of <span style="font-style: italic;font-weight:bold">Array</span>(with the cost of O(n)). If the key in Map is of type String,
-               then it will convert the string into integer using ASCII and apply hash functions to the converted value in order to add the item at
-               a place with unique index.
+        <h2 style="padding-top:1.5em">
+            <a id = "studyNotes" class = "studyNotes" style="padding:0"></a>
+            <span id="header_line" >Study Notes (JavaScript)</span>
+        </h2>
+        <h4 id="header_line" style="margin-left: 1.2rem;">1.Variables Assignment and Display (Press F12 for results)</h4>
+        <button onclick="hello()" id="button" style="margin-left: 2.5rem;">Execute hello.js</button>
+        <h4 id="header_line" style="margin-left: 1.2rem;">2.Conditions (Press F12 for results)</h4>
+        <button onclick="condition()" id="button" style="margin-left: 2.5rem;">Execute condition.js</button>
+        <h4 id="header_line" style="margin-left: 1.2rem;">3.Repeat Statements (Press F12 for results)</h4>
+        <button onclick="statement()" id="button" style="margin-left: 2.5rem;">Execute statement.js</button>
+        <h4 id="header_line" style="margin-left: 1.2rem;">4.Write functions (Press F12 for results)</h4>
+        <button onclick="functions()" id="button" style="margin-left: 2.5rem;">Execute functions.js</button>
+        <h4 id="header_line" style="margin-left: 1.2rem;">5.Create objects</h4>
+        <pre>
+            Task1:Adding character experience
+                    Improve our example RPG program to add an experience property named xp to the character. Its
+                    initial value is 0. Experience must appear in character description.
+            
+            Task2:Modeling a dog
+                    Complete the following program to add the dog object definition.
+                    // TODO: create the dog object here
+                    console.log(`${dog.name} is a ${dog.species} dog measuring ${dog.size}`);
+                    console.log(`Look, a cat! ${dog.name} barks: ${dog.bark()}`);
         </pre>
-    <button onclick="FP()" id="button" style="margin-left: 2.5rem;">10.Execute Functional Programming.js</button>
-    <h2>
-        <a id = "webDevCont" class = "webDevCont" style="padding:0"></a>
-        <span id="header_line">Web Development Content</span>
-    </h2>
+        <button onclick="objects()" id="button" style="margin-left: 2.5rem;">Execute objects.js</button>
+        <h4 id="header_line" style="margin-left: 1.2rem;">6.Manipulate Arrays</h4>
+        <pre>
+            Array maximum
+                Write a program that creates the following array, then calculates and shows the array’s maximum
+                value.
+                const values = [3, 11, 7, 2, 9, 10];
+            List of words
+                Write a program that asks the user for a word until the user types "stop". The program then
+                shows each of these words, except "stop".    
+        </pre>
+        <button onclick="arrays()" id="button" style="margin-left: 2.5rem;">Execute Array.js</button>
+        <h4 id="header_line" style="margin-left: 1.2rem;">7.Manipulate Strings</h4>
+        <pre>
+            Word info
+                Write a program that asks you for a word then shows its length, lowercase, and uppercase values.
+            Vowel count
+                Improve the previous program so that it also shows the number of vowels inside the word.
+            Backwards word
+                Improve the previous program so that it shows the word written backwards.
+            Palindrome
+                Improve the previous program to check if the word is a palindrome. A palindrome is a word or
+                sentence that’s spelled the same way both forward and backward, ignoring punctuation, case,
+                and spacing.
+                        "radar" should be detected as a palindrome, "Radar" too.    
+        </pre>
+        <button onclick="strings()" id="button" style="margin-left: 2.5rem;">Execute strings.js</button>
+        <h4 id="header_line" style="margin-left: 1.2rem;">8.Object-Oriented Programming （Press F12 to see more)</h4>
+        <pre>
+            Complete the program to add the definition of the Dog class.
+                Dogs taller than 60 emote "Grrr! Grrr!" when they bark, other ones yip "Woof!
+                Woof!".
+            Character inventory
+                Improve the example RPG to add character inventory management according to the following
+                rules:
+                    • A character’s inventory contains a number of gold and a number of keys.
+                    • Each character begins with 10 gold and 1 key.
+                    • The character description must show the inventory state.
+                    • When a character slays another character, the victim’s inventory goes to its vanquisher.
+            Account list
+                Let’s build upon a previous account object exercise. A bank account is still defined by:
+                    • A name property.
+                    • A balance property, initially set to 0.
+                    • A credit method adding the value passed as an argument to the account balance.
+                    • A describe method returning the account description.
+                Write a program that creates three accounts: one belonging to Sean, another to Brad and the
+                third one to Georges. These accounts are stored in an array. Next, the program credits 1000 to
+                each account and shows its description.
+        </pre>
+        <button onclick="OOP()" id="button" style="margin-left: 2.5rem;">Execute OOP.js</button>
+        <h4 id="header_line" style="margin-left: 1.2rem;">9.Functional Programming （Press F12 to see more)</h4>
+        <pre>
+            Older movies
+                Improve the example movie program from above so that it shows the titles of movies released
+                before year 2000, using functional programming.
+            Government forms
+                Complete the following program to compute and show the names of political forms ending with
+                "cy". 
+            Array sum
+                Show the total sum of the values in each of the
+                arrays.
+                    const arrays = [[1, 4], [11], [3, 5, 7]];
+        </pre>
+            <pre class = ".paragraph" >
+            <span style="font-weight:bolder;font-size: large;">NOTE:</span>
+                1."..." represents spread syntax, which can be applied to iterable items(arrays, properties of objects etc)
+                2.When trying to traverse a huge database, it is better to use <span style="font-style: italic;font-weight:bold">Map</span> data structure(with cost of O(1))
+                instead of <span style="font-style: italic;font-weight:bold">Array</span>(with the cost of O(n)). If the key in Map is of type String,
+                then it will convert the string into integer using ASCII and apply hash functions to the converted value in order to add the item at
+                a place with unique index.
+            </pre>
+        <button onclick="FP()" id="button" style="margin-left: 2.5rem;">10.Execute Functional Programming.js</button>
+        <h2>
+            <a id = "webDevCont" class = "webDevCont" style="padding:0"></a>
+            <span id="header_line">Web Development Content</span>
+        </h2>
+    </article>
     <script>
         var mybutton = document.getElementById("backtoTopBtn");
         window.onscroll = function(){scrollFunction()};
