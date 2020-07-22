@@ -53,7 +53,7 @@
             /* vm stands for viewport width, 100% means it will take the entire width of the screen*/
             width: 100vw;
             background-color:rgb(231, 214, 194);
-            position:fixed;
+            /*position:fixed;*/
             top:0;
             left:0;
             overflow: hidden;
@@ -64,12 +64,32 @@
             margin-bottom: 0.3em;
             display:flex;/*to display the navigation bar in a row*/
         }
+        #backtoTopBtn{
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: rgb(197, 162, 66); /* Set a background color */
+            color: rgb(73, 90, 109); /* Text color */
+            padding: 15px; /* Some padding */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+        }
+
+        #backtoTopBtn:hover {
+        background-color: rgb(139, 134, 116);
+        color :aliceblue; /* Add a dark-grey background on hover */
+        }
 
         </style>
     </style>
 </head>
 
 <body style = "background-color:rgb(255, 250, 244)">
+    <button onclick="topFunction()" id="backtoTopBtn" title="Go to top">Top</button>
     <nav>
         <ul> <!--ul stands for unordered list-->
             <li>
@@ -83,16 +103,16 @@
             </li>
         </ul>
     </nav>
-    <div id = "project">
-        <pre>   </pre>
-    </div>
-    <h3 id="header_line" style="margin-top:40px;">Personal Object Exercise</h3>
+    <h2>
+        <a id = "project" class = "project" style="padding:0"></a>
+        <span id="header_line">Personal Object Exercise</span>
+    </h2>
     <button onclick="SNP()" id="button" style="margin-left: 1.2rem;">SocialNewsProgram</button>
     
-    <div id = "studyNotes">
-        <pre>   </pre>
-    </div>
-    <h3 id="header_line">Study Notes (JavaScript)</h3>
+    <h2>
+        <a id = "studyNotes" class = "studyNotes" style="padding:0"></a>
+        <span id="header_line">Study Notes (JavaScript)</span>
+    </h2>
     <h4 id="header_line" style="margin-left: 1.2rem;">1.Variables Assignment and Display (Press F12 for results)</h4>
     <button onclick="hello()" id="button" style="margin-left: 2.5rem;">Execute hello.js</button>
     <h4 id="header_line" style="margin-left: 1.2rem;">2.Conditions (Press F12 for results)</h4>
@@ -185,11 +205,25 @@
                a place with unique index.
         </pre>
     <button onclick="FP()" id="button" style="margin-left: 2.5rem;">10.Execute Functional Programming.js</button>
-    <div id = "webDevCont">
-        <pre>   </pre>
-    </div>
-    <h3 id="header_line">Web Development Content</h3>
+    <h2>
+        <a id = "webDevCont" class = "webDevCont" style="padding:0"></a>
+        <span id="header_line">Web Development Content</span>
+    </h2>
     <script>
+        var mybutton = document.getElementById("backtoTopBtn");
+        window.onscroll = function(){scrollFunction()};
+
+        function scrollFunction(){
+            if(document.body.scrollTop > 20|| document.documentElement.scrollTop > 20){
+                mybutton.style.display = "block";
+            }else{
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
         function hello(){
             var script = document.createElement("script");
             script.type = "text/javascript";
